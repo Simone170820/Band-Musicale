@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contattaci per qualsiasi domanda, commento o recensione sulla nostra band musicale.">
+    <meta name="keywords" content="contatti, recensioni, band musicale, supporto">
+    <meta name="author" content="Band Musicale">
+    <title>Band Musicale - Contattaci </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <style>
+        /* CSS migliorato */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f4f4f4, #ffffff);
+            color: #fff;
+            padding: 20px 0;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(218, 213, 213, 0.1);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+            margin: 0;
+            color: #000;  /* Testo di "Band Musicale" in nero */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        nav ul li {
+            margin: 10px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        /* Stile per la sezione "Contattaci" */
+        #contact-section {
+            background-color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #111511;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Stile per le recensioni */
+        .reviews {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .reviews h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .review-card {
+            background-color: #f9f9f9;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .review-card p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .review-card .author {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .review-card .rating {
+            color: #FFD700;
+            font-size: 1.5em;
+        }
+        .bn632-hover {
+            width: 160px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            height: 55px;
+            text-align: center;
+            border: none;
+            background-size: 300% 100%;
+            border-radius: 50px;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .bn632-hover:hover {
+            background-position: 100% 0;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .bn632-hover:focus {
+            outline: none;
+        }
+
+        .bn632-hover.bn21 {
+            background-image: linear-gradient(
+                to right,
+                #fc6076,
+                #ff9a44,
+                #ef9d43,
+                #e75516
+            );
+        }
+        @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Band Musicale</h1>
+            <nav aria-label="Menu principale">
+                <ul>
+                    <li><a href="index.html"><button class="bn632-hover bn21"><i class="fas fa-home"></i> Home</button></a></li>
+                    <li><a href="chi_siamo.html"><button class="bn632-hover bn21"><i class="fas fa-users"></i> Chi Siamo</button></a></li>
+                    <li><a href="eventi.html"><button class="bn632-hover bn21"><i class="fas fa-calendar-alt"></i> Eventi</button></a></li>
+                    <li><a href="shop.html"><button class="bn632-hover bn21"><i class="fas fa-store"></i> Shop</button></a></li>
+                    <li><a href="contatti.html"><button class="bn632-hover bn21"><i class="fas fa-phone-alt"></i> Contattaci</button></a></li>
+                    <li><a href="login.html"></i>login</button></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sezione Contattaci -->
+        <section id="contact-section">
+            <h2>Contattaci</h2>
+            <p>Se hai domande, richieste o semplicemente vuoi lasciarci un messaggio, siamo qui per te!</p>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Il tuo nome" required>
+                <input type="email" name="email" placeholder="La tua email" required>
+                <textarea name="message" rows="4" placeholder="Il tuo messaggio..." required></textarea>
+                <button class="bn632-hover bn21">Invia Messaggio</button>
+            </form>
+        </section>
+
+        <!-- Sezione Recensioni -->
+        <section class="reviews">
+            <h3>Cosa dicono i nostri fan</h3>
+
+            <!-- Recensione 1 -->
+            <div class="review-card">
+                <div class="rating">★★★★★</div>
+                <p>"Un concerto incredibile! La band è fenomenale e la musica è stata un'esperienza unica. Non vedo l'ora del prossimo evento!"</p>
+                <div class="author">Maria Rossi</div>
+            </div>
+
+            <!-- Recensione 2 -->
+            <div class="review-card">
+                <div class="rating">★★★★☆</div>
+                <p>"I ragazzi sono fantastici! La loro energia sul palco è contagiosa. Consiglio vivamente di andare a vederli dal vivo!"</p>
+                <div class="author">Giovanni Bianchi</div>
+            </div>
+
+            <!-- Recensione 3 -->
+            <div class="review-card">
+                <div class="rating">★★★★★</div>
+                <p>"Mi hanno fatto sentire parte di qualcosa di speciale. Musica che tocca il cuore e una band che trasmette passione in ogni nota!"</p>
+                <div class="author">Elena Verdi</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Band Musicale. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+</body>
+</html>

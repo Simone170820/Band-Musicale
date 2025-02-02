@@ -1,0 +1,8 @@
+/xampp/
+/node_modules/
+/.env
+/config.php
+/db.php
+/vendor/
+/.idea/
+/.vscode/

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band Musicale - Eventi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #events {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #events h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        #events ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #events li {
+            background: #ffffff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #events li:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        #events li strong {
+            color: #007BFF;
+        }
+
+        .btn-prenota {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-prenota:hover {
+            background-color: #218838;
+        }
+
+        .cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cart:hover {
+            background-color: #0056b3;
+        }
+
+        .cart span {
+            margin-left: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Band Musicale</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="chi_siamo.html">Chi Siamo</a></li>
+                    <li><a href="eventi.html">Eventi</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="galleria.html">Galleria</a></li>
+                    <li><a href="contatti.html">Contattici</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cart" id="cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+    </div>
+
+    <section id="events">
+        <div class="container">
+            <h2>I Nostri Eventi</h2>
+            <ul>
+                <li>
+                    <span><strong><a href="evento1.html">Concerto a Milano</a></strong> - 15 Gennaio 2024</span>
+                    <button class="btn-prenota" onclick="addToCart('Concerto a Milano')">Prenota</button>
+                </li>
+                <li>
+                    <span><strong><a href="evento2.html">Festival Rock</a></strong> - 25 Febbraio 2024</span>
+                    <button class="btn-prenota" onclick="addToCart('Festival Rock')">Prenota</button>
+                </li>
+                <li>
+                    <span><strong><a href="evento3.html">Live a Roma</a></strong> - 10 Marzo 2024</span>
+                    <button class="btn-prenota" onclick="addToCart('Live a Roma')">Prenota</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Band Musicale. Tutti i diritti riservati.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/tuapagina" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/tuapagina" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/tuapagina" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/tuapagina" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart(eventName) {
+            cartCount++;
+            document.getElementById('cart-count').innerText = cartCount;
+            alert(eventName + ' aggiunto al carrello!');
+        }
+    </script>
+</body>
+</html>
