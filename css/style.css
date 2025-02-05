@@ -1,0 +1,330 @@
+/* Importa un font moderno */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Stile generale */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding-top: 100px;
+    background-color: #f8f9fa;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Tema scuro */
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    transition: background 0.4s ease-in-out, padding 0.3s ease-in-out;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px;
+}
+
+/* Menu Desktop */
+.desktop-menu {
+    margin-left: auto; /* Sposta il menu verso destra */
+}
+
+.desktop-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.desktop-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+}
+
+/* MENU MOBILE */
+.menu-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: white;
+    z-index: 1001;
+    display: block;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background: #222;
+    padding-top: 60px;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1002;
+}
+
+.mobile-menu.open {
+    left: 0;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.mobile-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.mobile-menu ul li a:hover {
+    color: #fb7202;
+}
+
+/* Nasconde il menu mobile su schermi grandi */
+@media (min-width: 769px) {
+    .menu-btn,
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* Overlay per il menu mobile */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.mobile-menu.open + .overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Carosello */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel img {
+    width: 100%;
+    flex: 0 0 100%;
+    border-radius: 10px;
+}
+
+/* Stile per le frecce del carosello */
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 28px;
+    padding: 12px 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.carousel button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+/* Footer */
+footer {
+    background: url('footer-background.jpg') no-repeat center bottom;
+    background-size: cover;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+footer div {
+    position: relative;
+    z-index: 1;
+}
+
+/* Icone social */
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: white;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Colori personalizzati per ogni social */
+.social-icons a[title="Facebook"]:hover { color: #1877F2; }
+.social-icons a[title="Instagram"]:hover { color: #E4405F; }
+.social-icons a[title="Twitter"]:hover { color: #1DA1F2; }
+.social-icons a[title="YouTube"]:hover { color: #FF0000; }
+.social-icons a[title="Spotify"]:hover { color: #1DB954; }
+
+/* Contatti nel footer */
+.contact-info {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Icone contatti */
+.contact-info i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.contact-info .fa-envelope { color: #D14836; }
+.contact-info .fa-phone { color: #25D366; }
+
+/* Pulsante tema */
+#theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#theme-toggle:hover {
+    background: #555;
+}
+
+.dark-mode #theme-toggle {
+    background: white;
+    color: black;
+}
+
+.dark-mode #theme-toggle:hover {
+    background: #ddd;
+}
+.bn632-hover {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all 0.4s ease-in-out;
+}
+
+.bn632-hover:hover {
+    background-position: 100% 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.bn632-hover:focus {
+    outline: none;
+}
+
+.bn632-hover.bn21 {
+    background-image: linear-gradient(
+        to right,
+        #fc6076,
+        #ff9a44,
+        #ef9d43,
+        #e75516
+    );
+}
