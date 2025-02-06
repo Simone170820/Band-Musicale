@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band Musicale</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/imagini/icona.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="/js/menu.js"></script> <-- JavaScript esterno -->
+</head>
+<body>
+
+<header>
+    <!-- Bottone menu mobile -->
+    <button class="menu-btn">☰</button>
+    <h1>Band Musicale</h1>
+    
+    <!-- Menu per desktop -->
+    <nav class="desktop-menu">
+        <ul>
+            <li><a href="index.html"><button class="bn632-hover bn21"><i class="fas fa-home"></i> Home</button></a></li>
+            <li><a href="chi_siamo.html"><button class="bn632-hover bn21"><i class="fas fa-users"></i> Chi Siamo</button></a></li>
+            <li><a href="eventi.html"><button class="bn632-hover bn21"><i class="fas fa-calendar-alt"></i> Eventi</button></a></li>
+            <li><a href="shop.html"><button class="bn632-hover bn21"><i class="fas fa-store"></i> Shop</button></a></li>
+            <li><a href="contatti.html"><button class="bn632-hover bn21"><i class="fas fa-phone-alt"></i> Contattaci</button></a></li>
+            <li><button id="theme-toggle">🌙/☀️</button></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Menu mobile -->
+<nav id="mobile-menu" class="mobile-menu">
+    <button id="mobile-theme-toggle">🌙/☀️</button>
+    <ul>
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="chi_siamo.html"><i class="fa-solid fa-users"></i> Chi Siamo</a></li>
+        <li><a href="eventi.html"><i class="fa-solid fa-calendar"></i> Eventi</a></li>
+        <li><a href="shop.html"><i class="fa-solid fa-cart-shopping"></i> Shop</a></li>
+        <li><a href="contatti.html"><i class="fa-solid fa-envelope"></i> Contattaci</a></li>
+    </ul>
+</nav>
+
+<!-- Overlay scuro per chiudere il menu -->
+<div id="overlay" class="overlay"></div>
+
+<main>
+    <section id="home">
+        <div class="container">
+            <h2 class="animated-text">Benvenuti nella nostra musica!</h2>
+            <p>Scopri la nostra storia, i nostri eventi e il nostro sound unico!</p>
+        </div>
+    </section>
+
+    <!-- Carosello di immagini -->
+    <section id="carousel-section">
+        <div class="carousel">
+            <button class="prev">&#10094;</button>
+            <div class="carousel-images">
+                <img src="/imagini/foto1.jpg" alt="Concerto 1">
+                <img src="/imagini/foto2.jpg" alt="Concerto 2">
+                <img src="/imagini/foto3.jpg" alt="Concerto 3">
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+</main>
+
+<!-- HTML -->
+<footer>
+    <div>
+        <p>&copy; 2025 Band Musicale. Tutti i diritti riservati.</p>
+
+        <!-- Contatti -->
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> <a href="simonepontillo@bandmusciale.it">simonepontillo@bandmusciale.it</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+393382515607">+39 338 251 5607</a></p>
+        </div>
+
+        <!-- Social media links -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61572405283073&locale=it_IT" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/novas_ys/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://open.spotify.com" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
