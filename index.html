@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Band Musicale</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" type="image/png" href="/imagini/icona.webp">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icona.webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script defer src="/js/menu.js"></script> <-- JavaScript esterno -->
+    <script defer src="menu.js"></script> <!-- JavaScript esterno -->
+
+    <!-- Iubenda Cookie Consent -->
+    <script type="text/javascript">
+        var _iub = _iub || [];
+        _iub.csConfiguration = {
+            "siteId": 3935704,
+            "cookiePolicyId": 36432700,
+            "lang": "it",
+            "storage": {"useSiteId": true}
+        };
+    </script>
+    <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3935704.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 </head>
 <body>
 
@@ -24,14 +37,12 @@
             <li><a href="eventi.html"><button class="bn632-hover bn21"><i class="fas fa-calendar-alt"></i> Eventi</button></a></li>
             <li><a href="shop.html"><button class="bn632-hover bn21"><i class="fas fa-store"></i> Shop</button></a></li>
             <li><a href="contatti.html"><button class="bn632-hover bn21"><i class="fas fa-phone-alt"></i> Contattaci</button></a></li>
-            <li><button id="theme-toggle">🌙/☀️</button></li>
         </ul>
     </nav>
 </header>
 
 <!-- Menu mobile -->
 <nav id="mobile-menu" class="mobile-menu">
-    <button id="mobile-theme-toggle">🌙/☀️</button>
     <ul>
         <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
         <li><a href="chi_siamo.html"><i class="fa-solid fa-users"></i> Chi Siamo</a></li>
@@ -53,20 +64,20 @@
     </section>
 
     <!-- Carosello di immagini -->
-    <section id="carousel-section">
-        <div class="carousel">
-            <button class="prev">&#10094;</button>
-            <div class="carousel-images">
-                <img src="/imagini/foto1.jpg" alt="Concerto 1">
-                <img src="/imagini/foto2.jpg" alt="Concerto 2">
-                <img src="/imagini/foto3.jpg" alt="Concerto 3">
-            </div>
-            <button class="next">&#10095;</button>
-        </div>
-    </section>
+            <section id="carousel-section">
+                <div class="carousel">
+                    <button class="prev">&#10094;</button>
+                    <div class="carousel-images">
+                        <img src="foto1.jpg" alt="Concerto 1">
+                        <img src="foto2.jpg" alt="Concerto 2">
+                        <img src="foto3.jpg" alt="Concerto 3">
+                    </div>
+                    <button class="next">&#10095;</button>
+                </div>
+            </section>
 </main>
 
-<!-- HTML -->
+<!-- Footer -->
 <footer>
     <div>
         <p>&copy; 2025 Band Musicale. Tutti i diritti riservati.</p>
@@ -87,7 +98,6 @@
         </div>
     </div>
 </footer>
-
 
 </body>
 </html>
